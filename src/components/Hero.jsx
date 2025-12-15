@@ -13,7 +13,6 @@ const Hero = () => {
     const scrollRef = useRef(null);
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
 
     const slides = [
         {
@@ -33,14 +32,24 @@ const Hero = () => {
         }
     ];
 
-    // Auto-play slider - fixed version
+    // Auto-play slider - FIXED VERSION
     useEffect(() => {
+        console.log('Setting up auto-play timer');
+
         const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
+            console.log('Timer fired - changing slide');
+            setCurrentSlide((prevSlide) => {
+                const nextSlide = (prevSlide + 1) % slides.length;
+                console.log(`Changing from slide ${prevSlide} to ${nextSlide}`);
+                return nextSlide;
+            });
         }, 5000);
 
-        return () => clearInterval(timer);
-    }, []); // Empty dependency array - runs once on mount
+        return () => {
+            console.log('Cleaning up timer');
+            clearInterval(timer);
+        };
+    }, []); // Empty deps - timer runs once on mount
 
     // Initial animation on page load
     useEffect(() => {
@@ -120,12 +129,10 @@ const Hero = () => {
 
     // Slide change animation
     useEffect(() => {
-        if (titleRef.current && subtitleRef.current) {
-            setIsAnimating(true);
+        console.log(`Slide changed to: ${currentSlide}`);
 
-            const tl = gsap.timeline({
-                onComplete: () => setIsAnimating(false)
-            });
+        if (titleRef.current && subtitleRef.current) {
+            const tl = gsap.timeline();
 
             tl.to([titleRef.current, subtitleRef.current], {
                 opacity: 0,
@@ -147,19 +154,15 @@ const Hero = () => {
     }, [currentSlide]);
 
     const nextSlide = () => {
-        if (!isAnimating) {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
     };
 
     const prevSlide = () => {
-        if (!isAnimating) {
-            setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-        }
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
     const goToSlide = (index) => {
-        if (!isAnimating && index !== currentSlide) {
+        if (index !== currentSlide) {
             setCurrentSlide(index);
         }
     };
