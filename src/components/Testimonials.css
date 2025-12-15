@@ -1,0 +1,79 @@
+.testimonials-section {
+    background-color: var(--color-light-bg);
+    text-align: center;
+}
+
+.testimonials-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-content {
+    position: relative;
+    padding: 3rem 2rem;
+}
+
+.quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: var(--color-secondary);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: -2rem;
+}
+
+.testimonial-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-primary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.testimonial-author {
+    margin-top: 2rem;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.author-role {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    letter-spacing: 0.05em;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot.active {
+    background-color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background-color: var(--color-secondary);
+    opacity: 0.7;
+}
