@@ -4,19 +4,19 @@ import './Testimonials.css';
 const Testimonials = () => {
     const testimonials = [
         {
-            quote: "Engaging, creative page and purposeful theme.",
-            author: "Sarah & Michael",
-            role: "Happy Couple"
+            quote: "Proin gravida nibh vel veliauctor aliquenean sollicitudiem quis bibendum auctor, nisi elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+            author: "MARIA & MARK",
+            role: "Wedding Couple"
         },
         {
-            quote: "The perfect blend of elegance and functionality for our special day.",
-            author: "Emma & James",
+            quote: "Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.",
+            author: "JANE & JOHN",
+            role: "Happy Clients"
+        },
+        {
+            quote: "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra.",
+            author: "SARAH & TOM",
             role: "Newlyweds"
-        },
-        {
-            quote: "Beautiful design that captured the essence of our love story.",
-            author: "Olivia & Daniel",
-            role: "Married 2024"
         }
     ];
 
@@ -25,17 +25,19 @@ const Testimonials = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        }, 5000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, [testimonials.length]);
 
     return (
         <section className="testimonials-section section-large">
+            <div className="testimonials-overlay"></div>
             <div className="container">
                 <div className="testimonials-wrapper">
-                    <div className="section-header text-center mb-4">
-                        <h2 className="section-title">Testimonials</h2>
+                    <div className="section-header text-center mb-5">
+                        <h2 className="section-title text-white">TESTIMONIALS</h2>
+                        <div className="separator-line white"></div>
                     </div>
 
                     <div className="testimonial-content">
@@ -45,7 +47,6 @@ const Testimonials = () => {
                         </blockquote>
                         <div className="testimonial-author">
                             <p className="author-name">{testimonials[currentIndex].author}</p>
-                            <p className="author-role">{testimonials[currentIndex].role}</p>
                         </div>
                     </div>
 

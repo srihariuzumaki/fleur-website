@@ -17,18 +17,21 @@ const Hero = () => {
     const slides = [
         {
             image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-1-background.jpg',
-            title: 'Fleur',
-            subtitle: 'A Theme for Weddings, Celebrations, and Wedding Businesses'
+            title: 'STYLE & GRACE',
+            subtitle: 'Make your beautiful website with Fleur',
+            description: null
         },
         {
             image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-3-background.jpg',
-            title: 'Simply Charming',
-            subtitle: 'Creating unforgettable moments for your special day'
+            title: 'THIS IS BEAUTY',
+            subtitle: 'Designed with love & care, Fleur is all you ever wanted',
+            description: 'Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor elit. Duis sed odio sit amet nibh'
         },
         {
             image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-4-background.jpg',
-            title: 'Elegant Celebrations',
-            subtitle: 'Where dreams become beautiful reality'
+            title: 'SIMPLY CHARMING',
+            subtitle: 'Creating unforgettable moments for your special day',
+            description: null
         }
     ];
 
@@ -207,8 +210,13 @@ const Hero = () => {
                     <p className="hero-subtitle" ref={subtitleRef}>
                         {slides[currentSlide].subtitle}
                     </p>
+                    {slides[currentSlide].description && (
+                        <p className="hero-description">
+                            {slides[currentSlide].description}
+                        </p>
+                    )}
                     <div className="hero-cta" ref={ctaRef}>
-                        <a href="#explore" className="btn">Explore More</a>
+                        <a href="#explore" className="btn">PURCHASE</a>
                     </div>
                 </div>
 

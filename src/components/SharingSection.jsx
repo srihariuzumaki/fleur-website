@@ -9,20 +9,19 @@ const SharingSection = () => {
     const sectionRef = useRef(null);
 
     useEffect(() => {
-        const cards = sectionRef.current.querySelectorAll('.sharing-card');
+        const items = sectionRef.current.querySelectorAll('.sharing-item');
 
-        cards.forEach((card, index) => {
-            gsap.from(card, {
+        items.forEach((item, index) => {
+            gsap.from(item, {
                 scrollTrigger: {
-                    trigger: card,
-                    start: 'top 80%',
-                    end: 'top 50%',
+                    trigger: item,
+                    start: 'top 85%',
                     toggleActions: 'play none none reverse'
                 },
-                y: 80,
+                y: 50,
                 opacity: 0,
                 duration: 1,
-                delay: index * 0.15,
+                delay: index * 0.2,
                 ease: 'power3.out'
             });
         });
@@ -32,47 +31,58 @@ const SharingSection = () => {
         };
     }, []);
 
-    const cards = [
+    const features = [
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/03/home-1-image-1.jpg',
-            title: 'Connect your worlds',
-            description: 'Bring together your closest friends and family in a celebration of love and unity.'
+            icon: (
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            ),
+            title: "DISCOVER WHAT'S POSSIBLE",
+            description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis."
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/03/home-1-image-2.jpg',
-            title: 'Choose your style',
-            description: 'From classic elegance to modern sophistication, find the perfect aesthetic for your special day.'
+            icon: (
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            ),
+            title: "PEOPLE REALLY MATTER",
+            description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis."
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/03/home-1-image-3.jpg',
-            title: 'Wedding lists',
-            description: 'Create beautiful registries and wish lists to help make your dreams come true.'
-        },
-        {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/03/home-1-image-4.jpg',
-            title: 'Something Special',
-            description: 'Every detail matters. Let us help you create unforgettable moments that last a lifetime.'
+            icon: (
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            ),
+            title: "HAVING A PLAN FEELS GOOD",
+            description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis."
         }
     ];
 
     return (
-        <section className="sharing-section section" id="explore" ref={sectionRef}>
+        <section className="sharing-section section" id="about" ref={sectionRef}>
             <div className="container">
-                <div className="section-header text-center mb-4">
-                    <h2 className="section-title">We're Sharing Everything</h2>
+                <div className="section-header text-center">
+                    <h2 className="section-title">WE'RE SHARING EVERYTHING</h2>
+                    <p className="section-subtitle">
+                        Lorem ipsum dolor sit amet, consectetuer a gravida nibhumus vel velit auctor aliquet aenean sollicitudin lorem.
+                    </p>
+                    <div className="separator-line"></div>
                 </div>
 
-                <div className="sharing-grid grid grid-4">
-                    {cards.map((card, index) => (
-                        <div key={index} className="sharing-card">
-                            <div className="card-image image-wrapper">
-                                <img src={card.image} alt={card.title} loading="lazy" />
+                <div className="sharing-grid">
+                    {features.map((feature, index) => (
+                        <div key={index} className="sharing-item">
+                            <div className="feature-icon">
+                                {feature.icon}
                             </div>
-                            <div className="card-content">
-                                <h3 className="card-title">{card.title}</h3>
-                                <p className="card-description">{card.description}</p>
-                                <a href="#" className="btn-link">Read more →</a>
-                            </div>
+                            <h3 className="feature-title">{feature.title}</h3>
+                            <p className="feature-description">{feature.description}</p>
                         </div>
                     ))}
                 </div>

@@ -169,6 +169,19 @@
     will-change: transform, opacity;
 }
 
+.hero-description {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+}
+
 .hero-cta {
     will-change: transform, opacity;
 }
