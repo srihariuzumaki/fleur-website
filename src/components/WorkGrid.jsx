@@ -18,10 +18,10 @@ const WorkGrid = () => {
                     start: 'top 85%',
                     toggleActions: 'play none none reverse'
                 },
-                y: 50,
-                opacity: 0,
+                // y: 50,
+                // opacity: 0,
                 duration: 0.8,
-                delay: (index % 3) * 0.1,
+                delay: (index % 3) * 0.2,
                 ease: 'power3.out'
             });
         });
@@ -33,34 +33,34 @@ const WorkGrid = () => {
 
     const works = [
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port2-img-1-650x650.jpg',
+            image: '/assets/images/work-1.jpg',
             title: 'ELEGANT CELEBRATION',
             category: 'Wedding Planning'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port2-img-2-650x650.jpg',
-            title: 'PERFECT MOMENTS',
-            category: 'Photography'
-        },
-        {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port2-img-3-650x650.jpg',
-            title: 'FLORAL ARTISTRY',
+            image: '/assets/images/work-2.jpg',
+            title: 'RUSTIC CHARM',
             category: 'Decoration'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port4-img-7-650x650.jpg',
-            title: 'DREAM VENUES',
-            category: 'Locations'
+            image: '/assets/images/work-3.jpg',
+            title: 'FLORAL DREAMS',
+            category: 'Floristry'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port4-img-6-650x650.jpg',
-            title: 'SWEET CREATIONS',
+            image: '/assets/images/work-4.jpg',
+            title: 'MODERN ROMANCE',
+            category: 'Photography'
+        },
+        {
+            image: '/assets/images/work-5.jpg',
+            title: 'VINTAGE LOVE',
+            category: 'Styling'
+        },
+        {
+            image: '/assets/images/work-6.jpg',
+            title: 'GARDEN PARTY',
             category: 'Catering'
-        },
-        {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/port2-img-4-650x650.jpg',
-            title: 'LOVE STORIES',
-            category: 'Couples'
         }
     ];
 
@@ -69,18 +69,18 @@ const WorkGrid = () => {
             <div className="container-fluid">
                 <div className="section-header text-center mb-5">
                     <h2 className="section-title">OUR AMAZING WORK</h2>
-                    <p className="section-subtitle">Capturing beautiful moments and creating unforgettable experiences</p>
+                    <p className="section-subtitle">Lorem ipsum dolor sit amet, consectetuer gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem niuis sed odio sit amet nibh</p>
                     <div className="separator-line"></div>
                 </div>
 
                 <div className="work-masonry">
                     {works.map((work, index) => (
                         <div key={index} className="work-item">
-                            <div className="work-image image-wrapper">
+                            <div className="work-image">
                                 <img src={work.image} alt={work.title} loading="lazy" />
                                 <div className="work-overlay">
                                     <div className="work-info">
-                                        <h3 className="work-title">{work.title}</h3>
+                                        <h4 className="work-title">{work.title}</h4>
                                         <div className="separator-line-small"></div>
                                         <p className="work-category">{work.category}</p>
                                     </div>

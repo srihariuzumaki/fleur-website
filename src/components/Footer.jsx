@@ -3,12 +3,12 @@ import './Footer.css';
 
 const Footer = () => {
     const instagramImages = [
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-1.jpg',
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-2.jpg',
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-3.jpg',
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-4.jpg',
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-5.jpg',
-        'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/instagram-6.jpg'
+        '/assets/images/instagram-1.jpg',
+        '/assets/images/instagram-2.jpg',
+        '/assets/images/instagram-3.jpg',
+        '/assets/images/instagram-4.jpg',
+        '/assets/images/instagram-5.jpg',
+        '/assets/images/instagram-6.jpg'
     ];
 
     return (

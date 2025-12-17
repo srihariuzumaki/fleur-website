@@ -1,6 +1,6 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import FeaturesSection from './components/FeaturesSection';
 import SharingSection from './components/SharingSection';
 import Testimonials from './components/Testimonials';
 import WorkGrid from './components/WorkGrid';
@@ -16,12 +16,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <SharingSection />
+        <FeaturesSection />
         <Testimonials />
         <WorkGrid />
         <TeamSection />
         <ProductsSection />
         <ClientsSection />
+        <SharingSection />
       </main>
       <Footer />
     </div>

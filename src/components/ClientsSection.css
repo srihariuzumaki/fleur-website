@@ -2,23 +2,29 @@
     background-color: var(--color-light-bg);
 }
 
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 3rem;
-    align-items: center;
-    justify-items: center;
+.clients-wrapper {
     padding: 2rem 0;
+}
+
+.clients-swiper {
+    padding: 20px 0;
+    cursor: grab;
+}
+
+.clients-swiper:active {
+    cursor: grabbing;
 }
 
 .client-logo {
     position: relative;
     width: 120px;
     height: 80px;
+    margin: 0 auto;
+    /* Center in slide */
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .client-img {
@@ -48,20 +54,8 @@
     opacity: 1;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .clients-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-}
-
+/* Responsive adjustments handled by Swiper breakpoints */
 @media (max-width: 768px) {
-    .clients-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
     .client-logo {
         width: 100px;
         height: 70px;

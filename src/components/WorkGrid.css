@@ -40,8 +40,6 @@
 .work-item {
     break-inside: avoid;
     margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(50px);
 }
 
 .work-image {

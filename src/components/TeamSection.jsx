@@ -18,8 +18,8 @@ const TeamSection = () => {
                     start: 'top 85%',
                     toggleActions: 'play none none reverse'
                 },
-                y: 50,
-                opacity: 0,
+                // y: 50,
+                // opacity: 0,
                 duration: 0.8,
                 delay: (index % 3) * 0.2,
                 ease: 'power3.out'
@@ -33,19 +33,19 @@ const TeamSection = () => {
 
     const team = [
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/team-2-img-1.png',
+            image: '/assets/images/team-1.png',
             name: 'AMANDA DOE',
             role: 'Wedding Planner',
             description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis.'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/team-2-img-2.png',
+            image: '/assets/images/team-2.png',
             name: 'JANE DOE',
             role: 'Photographer',
             description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis.'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/05/team-2-img-3.png',
+            image: '/assets/images/team-3.png',
             name: 'JOHN DOE',
             role: 'Decorator',
             description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis.'

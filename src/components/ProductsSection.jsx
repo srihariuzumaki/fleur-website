@@ -18,8 +18,8 @@ const ProductsSection = () => {
                     start: 'top 85%',
                     toggleActions: 'play none none reverse'
                 },
-                y: 50,
-                opacity: 0,
+                // y: 50,
+                // opacity: 0,
                 duration: 0.8,
                 delay: (index % 3) * 0.2,
                 ease: 'power3.out'
@@ -33,17 +33,17 @@ const ProductsSection = () => {
 
     const products = [
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/04/shop-1.jpg',
+            image: '/assets/images/product-1.jpg',
             title: 'FLOWER BOX',
             price: '$25'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/04/shop-2.jpg',
+            image: '/assets/images/product-2.jpg',
             title: 'FLOWER POT',
             price: '$35'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2016/04/shop-3.jpg',
+            image: '/assets/images/product-3.jpg',
             title: 'FLOWER DECOR',
             price: '$45'
         }
@@ -53,7 +53,7 @@ const ProductsSection = () => {
         <section className="products-section section" ref={sectionRef}>
             <div className="container">
                 <div className="section-header text-center mb-5">
-                    <h2 className="section-title">OUR PRODUCTS</h2>
+                    <h2 className="section-title">SHOP COLLECTION</h2>
                     <p className="section-subtitle">Lorem ipsum dolor sit amet, consectetuer gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem niuis sed odio sit amet nibh</p>
                     <div className="separator-line"></div>
                 </div>

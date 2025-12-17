@@ -16,19 +16,19 @@ const Hero = () => {
 
     const slides = [
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-1-background.jpg',
+            image: '/assets/images/hero-slide-1.jpg',
             title: 'STYLE & GRACE',
             subtitle: 'Make your beautiful website with Fleur',
             description: null
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-3-background.jpg',
+            image: '/assets/images/hero-slide-2.jpg',
             title: 'THIS IS BEAUTY',
             subtitle: 'Designed with love & care, Fleur is all you ever wanted',
             description: 'Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor elit. Duis sed odio sit amet nibh'
         },
         {
-            image: 'https://fleur.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide-4-background.jpg',
+            image: '/assets/images/hero-slide-3.jpg',
             title: 'SIMPLY CHARMING',
             subtitle: 'Creating unforgettable moments for your special day',
             description: null
