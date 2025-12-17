@@ -46,7 +46,8 @@
 }
 
 /* Diamond separator */
-.separator-line {
+
+.team-section .separator-line {
     width: 6px;
     height: 6px;
     background-color: #333333;

@@ -71,7 +71,6 @@ const FeaturesSection = () => {
                     <p className="section-subtitle">
                         Lorem ipsum dolor sit amet, consectetuer a gravida nibhumus vel velit auctor aliquet aenean sollicitudin lorem.
                     </p>
-                    <div className="separator-line"></div>
                 </div>
 
                 <div className="features-grid">
