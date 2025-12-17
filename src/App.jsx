@@ -1,7 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FeaturesSection from './components/FeaturesSection';
-import SharingSection from './components/SharingSection';
 import Testimonials from './components/Testimonials';
 import WorkGrid from './components/WorkGrid';
 import TeamSection from './components/TeamSection';
@@ -22,7 +21,6 @@ function App() {
         <TeamSection />
         <ProductsSection />
         <ClientsSection />
-        <SharingSection />
       </main>
       <Footer />
     </div>

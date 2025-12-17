@@ -1,14 +1,36 @@
 .team-section {
-    background-color: #ffffff;
-    padding: 6rem 0;
+    background-image: url('/assets/images/team-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 7rem 0;
+    position: relative;
+}
+
+/* Light overlay to improve text contrast */
+.team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.team-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    letter-spacing: 0.1em;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #333333;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    /* Lighter weight as typically seen in these themes */
 }
 
 .section-subtitle {
@@ -16,24 +38,27 @@
     color: #888888;
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    margin-bottom: 2rem;
-    max-width: 800px;
+    margin-bottom: 2.5rem;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
 }
 
+/* Diamond separator */
 .separator-line {
-    width: 40px;
-    height: 1px;
+    width: 6px;
+    height: 6px;
     background-color: #333333;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
+    transform: rotate(45deg);
+    /* Diamond shape */
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -42,30 +67,40 @@
     text-align: center;
 }
 
+/* Circular Images */
 .member-image {
-    position: relative;
-    margin-bottom: 2rem;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 2.5rem;
+    border-radius: 50%;
     overflow: hidden;
+    position: relative;
+    /* transition: none; Remove transform on container if scaling image inside */
 }
 
 .member-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    filter: grayscale(100%);
+    /* Add grayscale default to match sophisticated look */
 }
 
 .member-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    /* Remove grayscale on hover */
 }
 
 .member-info {
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .member-name {
-    font-size: 1rem;
-    color: #333333;
+    font-size: 0.9rem;
+    color: #2b2b2b;
     margin-bottom: 0.5rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -73,21 +108,23 @@
 }
 
 .member-role {
-    font-size: 0.9rem;
-    color: #888888;
+    font-size: 1rem;
+    color: #555555;
     font-family: 'Playfair Display', serif;
-    font-style: italic;
-    margin-bottom: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
 }
 
 .member-description {
     font-size: 0.95rem;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #888888;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     font-weight: 300;
+    padding: 0 10px;
 }
 
+/* Plain Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -96,25 +133,33 @@
 
 .social-icon {
     color: #333333;
-    font-size: 1rem;
+    font-size: 0.85rem;
     transition: color 0.3s ease;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    background: transparent;
+    /* Ensure no background */
+    border-radius: 0;
 }
 
 .social-icon:hover {
-    color: #888888;
+    color: #c2a084;
+    /* Gold highlight */
+    background: transparent;
 }
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 3rem;
     }
 }
 
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 4rem;
     }
 }
