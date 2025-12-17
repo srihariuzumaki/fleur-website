@@ -4,6 +4,7 @@ import FeaturesSection from './components/FeaturesSection';
 import Testimonials from './components/Testimonials';
 import WorkGrid from './components/WorkGrid';
 import TeamSection from './components/TeamSection';
+import BackToTop from './components/BackToTop';
 import ProductsSection from './components/ProductsSection';
 import ClientsSection from './components/ClientsSection';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ function App() {
         <ClientsSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
