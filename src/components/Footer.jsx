@@ -2,14 +2,7 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
-    const instagramImages = [
-        '/assets/images/instagram-1.jpg',
-        '/assets/images/instagram-2.jpg',
-        '/assets/images/instagram-3.jpg',
-        '/assets/images/instagram-4.jpg',
-        '/assets/images/instagram-5.jpg',
-        '/assets/images/instagram-6.jpg'
-    ];
+    const instagramImages = []; // Array removed as section is deleted
 
     return (
         <footer className="footer">
@@ -45,16 +38,6 @@ const Footer = () => {
                         <p className="footer-text">Couldn't connect with Twitter</p>
                     </div>
 
-                    <div className="footer-column">
-                        <h4 className="footer-title">Instagram</h4>
-                        <div className="instagram-grid">
-                            {instagramImages.map((img, index) => (
-                                <a key={index} href="#" className="instagram-item">
-                                    <img src={img} alt={`Instagram ${index + 1}`} loading="lazy" />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
                 </div>
 
                 <div className="footer-bottom">

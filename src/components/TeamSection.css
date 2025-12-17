@@ -69,8 +69,8 @@
 
 /* Circular Images */
 .member-image {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto 2.5rem;
     border-radius: 50%;
     overflow: hidden;
@@ -133,7 +133,7 @@
 
 .social-icon {
     color: #333333;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     transition: color 0.3s ease;
     text-decoration: none;
     width: auto;
